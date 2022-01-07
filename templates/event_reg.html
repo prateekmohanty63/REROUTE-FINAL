@@ -1,0 +1,390 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="{% static 'css/event_reg_form.css' %}"/>
+  </head>
+  
+  <body>
+    
+    <!-- {% if message  %}
+    <div class="error">
+        <p>{{ message }}</p>
+    </div>
+  {% endif %}
+  
+  {% if phone_no  %}
+  <div class="error">
+      <p>{{ phone_no }}</p>
+  </div>
+  {% endif %}
+  
+  
+  {% if discord_id  %}
+  <div class="error">
+      <p>{{ discord_id }}</p>
+  </div>
+  {% endif %} -->
+
+
+     
+  
+    <div class="container">
+      <h1>{{id}}</h1>
+      
+      <form id="form" class="form" method="POST" action="/data">
+        <h1 style="color: white">Event Registration</h1>
+        
+        <!--lead member of team-->
+        <!-- <div class="form-control">
+          <label for="teamname"
+            ><span style="color: yellow">*</span>Name</label
+          >
+          <input
+            type="text"
+            id="teamname"
+            placeholder="Enter Team Name"
+            name="TeamName"
+            required
+          />
+        </div>
+        <div class="form-control">
+          <label for="leadEmail"
+            ><span style="color: yellow">*</span>Email-id</label
+          >
+          <input
+            type="email"
+            id="leadEmail"
+            placeholder="Enter Email-id Of The Team Lead"
+            name="LeadEmail"
+            required
+          />
+        </div>
+        <div class="form-control">
+          <label for="leadNumber"
+            ><span style="color: yellow">*</span>Mobile Number</label
+          >
+          <input
+            type="tel"
+            id="leadNumber"
+            placeholder="Enter Mobile Number Of The Team Lead"
+            name="LeadNumber"
+            required
+          />
+        </div> -->
+        <div class="form-control">
+          <label for="members"
+            ><span style="color: yellow">*</span>Number Of Members? (Apart from main team member)</label
+          >
+          <select name="No_mem" id="Totalmembers">
+            <option value="0" selected>Select one</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+
+        <!--1st member-->
+        <div class="memberContainer">
+          <h3 style="text-align: center">1st Member Details</h3>
+
+          <div class="form-control">
+            <label for="Did1"
+              ><span style="color: yellow">*</span>Name of  1st Member
+              <br />
+            </label>
+            <input
+              type="text"
+              id="Did1"
+              placeholder="Enter Discord Id Of The 1st Member"
+              name="Did1"
+              required
+            />
+          </div>
+          <div class="form-control">
+            <label for="Vid1"
+              ><span style="color: yellow">*</span>Phone number
+              <br />(whatsapp Number)</label
+            >
+            <input
+              type="tel"
+              id="Vid1"
+              placeholder="Enter Valorant ID of 1st Member"
+              name="Vid1"
+              required
+            />
+          </div>
+          <div class="form-control">
+            <label for="playerLevel1"
+              ><span style="color: yellow">*</span>Age</label
+            >
+            <!-- <select name="playerLevel1" id="playerLevel1">
+              <option value="Radiant">Radiant</option>
+              <option value="Immortal">Immortal</option>
+              <option value="Diamond">Diamond</option>
+              <option value="Platinum">Platinum</option>
+              <option value="Gold">Gold</option>
+              <option value="Silver">Silver</option>
+              <option value="Bronze">Bronze</option>
+              <option value="Iron">Iron</option>
+              <option value="No Level">No Level</option>
+            </select> -->
+            <input
+            type="number"
+            id="Vid1"
+            placeholder="Enter Valorant ID of 1st Member"
+            name="Vid1"
+            required
+          />
+          </div>
+        </div>
+
+        <!--2nd member-->
+        <div class="memberContainer">
+          <h3 style="text-align: center">2nd Member Details</h3>
+
+          <div class="form-control">
+            <label for="Did2"
+              >Name  <br />
+            </label>
+            <input
+              type="text"
+              id="Did2"
+              placeholder="Enter Discord Id Of The 2nd Member"
+              name="Did2"
+            />
+          </div>
+          <div class="form-control">
+            <label for="Vid2"
+              >Phone number</label
+            >
+            <input
+              type="text"
+              id="Vid2"
+              placeholder="Enter Valorant ID of 2nd Member"
+              name="Vid2"
+            />
+          </div>
+          <div class="form-control">
+            <label for="playerLevel2">Age</label>
+            <!-- <select name="playerLevel2" id="playerLevel2">
+              <option value="Radiant">Radiant</option>
+              <option value="Immortal">Immortal</option>
+              <option value="Diamond">Diamond</option>
+              <option value="Platinum">Platinum</option>
+              <option value="Gold">Gold</option>
+              <option value="Silver">Silver</option>
+              <option value="Bronze">Bronze</option>
+              <option value="Iron">Iron</option>
+              <option value="No Level">No Level</option>
+            </select> -->
+            <input
+            type="number"
+            id="Vid2"
+            placeholder="Enter Valorant ID of 2nd Member"
+            name="Vid2"
+          />
+          </div>
+        </div>
+
+        <!--3rd member-->
+        <div class="memberContainer">
+            <h3 style="text-align: center">3rd Member Details</h3>
+  
+            <div class="form-control">
+              <label for="Did2"
+                >Name  <br />
+              </label>
+              <input
+                type="text"
+                id="Did2"
+                placeholder="Enter Discord Id Of The 2nd Member"
+                name="Did2"
+              />
+            </div>
+            <div class="form-control">
+              <label for="Vid2"
+                >Phone number</label
+              >
+              <input
+                type="text"
+                id="Vid2"
+                placeholder="Enter Valorant ID of 2nd Member"
+                name="Vid2"
+              />
+            </div>
+            <div class="form-control">
+              <label for="playerLevel2">Age</label>
+              <!-- <select name="playerLevel2" id="playerLevel2">
+                <option value="Radiant">Radiant</option>
+                <option value="Immortal">Immortal</option>
+                <option value="Diamond">Diamond</option>
+                <option value="Platinum">Platinum</option>
+                <option value="Gold">Gold</option>
+                <option value="Silver">Silver</option>
+                <option value="Bronze">Bronze</option>
+                <option value="Iron">Iron</option>
+                <option value="No Level">No Level</option>
+              </select> -->
+              <input
+              type="number"
+              id="Vid2"
+              placeholder="Enter Valorant ID of 2nd Member"
+              name="Vid2"
+            />
+            </div>
+          </div>
+  
+
+        <!--4th member-->
+        <div class="memberContainer">
+            <h3 style="text-align: center">4th Member Details</h3>
+  
+            <div class="form-control">
+              <label for="Did2"
+                >Name  <br />
+              </label>
+              <input
+                type="text"
+                id="Did2"
+                placeholder="Enter Discord Id Of The 2nd Member"
+                name="Did2"
+              />
+            </div>
+            <div class="form-control">
+              <label for="Vid2"
+                >Phone number</label
+              >
+              <input
+                type="text"
+                id="Vid2"
+                placeholder="Enter Valorant ID of 2nd Member"
+                name="Vid2"
+              />
+            </div>
+            <div class="form-control">
+              <label for="playerLevel2">Age</label>
+              <!-- <select name="playerLevel2" id="playerLevel2">
+                <option value="Radiant">Radiant</option>
+                <option value="Immortal">Immortal</option>
+                <option value="Diamond">Diamond</option>
+                <option value="Platinum">Platinum</option>
+                <option value="Gold">Gold</option>
+                <option value="Silver">Silver</option>
+                <option value="Bronze">Bronze</option>
+                <option value="Iron">Iron</option>
+                <option value="No Level">No Level</option>
+              </select> -->
+              <input
+              type="number"
+              id="Vid2"
+              placeholder="Enter Valorant ID of 2nd Member"
+              name="Vid2"
+            />
+            </div>
+          </div>
+  
+
+        <!--5th member-->
+        <div class="memberContainer">
+            <h3 style="text-align: center">5th Member Details</h3>
+  
+            <div class="form-control">
+              <label for="Did2"
+                >Name  <br />
+              </label>
+              <input
+                type="text"
+                id="Did2"
+                placeholder="Enter Discord Id Of The 2nd Member"
+                name="Did2"
+              />
+            </div>
+            <div class="form-control">
+              <label for="Vid2"
+                >Phone number</label
+              >
+              <input
+                type="text"
+                id="Vid2"
+                placeholder="Enter Valorant ID of 2nd Member"
+                name="Vid2"
+              />
+            </div>
+            <div class="form-control">
+              <label for="playerLevel2">Age</label>
+              <!-- <select name="playerLevel2" id="playerLevel2">
+                <option value="Radiant">Radiant</option>
+                <option value="Immortal">Immortal</option>
+                <option value="Diamond">Diamond</option>
+                <option value="Platinum">Platinum</option>
+                <option value="Gold">Gold</option>
+                <option value="Silver">Silver</option>
+                <option value="Bronze">Bronze</option>
+                <option value="Iron">Iron</option>
+                <option value="No Level">No Level</option>
+              </select> -->
+              <input
+              type="number"
+              id="Vid2"
+              placeholder="Enter Valorant ID of 2nd Member"
+              name="Vid2"
+            />
+            </div>
+          </div>
+  
+
+        <!--Transcation ID-->
+        <div class="form-control">
+          <label for="Tid"
+            ><span style="color: yellow">*</span>Transcation Id Of Payment
+            <br />(for example: root#1234)
+          </label>
+          <input
+            type="text"
+            id="Tid"
+            placeholder="Enter Transcation ID of Payment"
+            name="Tid"
+            required
+          />
+        </div>
+        <div class="form-control">
+          <label for="costid"
+            ><span style="color: yellow">*</span>Total Cost
+            <br />
+          </label>
+          <input
+            type="text"
+            id="costid"
+            placeholder="Total cost"
+            name="Tid"
+            required
+          />
+         
+        </div>
+
+        <h4 style="text-align: left; color: white">
+          <span style="color: yellow">*</span> marked are required fields.
+        </h4>
+        <div>
+          <a href="#">
+            <button class="btn btn--light">
+              <span class="btn__inner">
+                <span class="btn__slide"></span>
+                <span class="btn__content">Pay & Register</span>
+              </span>
+            </button>
+          </a>
+        </div>
+      </form>
+    </div>
+    <script src="{% static 'js/event_reg.js' %}"></script>
+  </body>
+</html>
