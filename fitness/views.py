@@ -238,9 +238,11 @@ def index(request):
 
 # Event registration part
 
-def event_reg_try(request,my_id):
-       event={'id':my_id}
-       return render(request,'event_reg.html',event)
+def event_reg_try(request,pk):
+       
+       event=Events.objects.get(id=pk)
+    #    event={'id':my_id}
+       return render(request,'event_reg.html',{'event':event})
 
 
 

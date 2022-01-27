@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.contrib.auth.models import User
 # Create your models here.
 
 # class Events(models.Model):
@@ -23,6 +23,14 @@ class gallery(models.Model):
     name=models.CharField(max_length=100)
     img=models.ImageField(upload_to='gallery')
 
+
+# class event_reg(models.Model):
+#     user=models.ForeignKey('auth.User',on_delete=models.CASCADE)
+#     event=models.ForeignKey(Events,on_delete=models.CASCADE)
+#     number=models.IntegerField()
+#     name=models.CharField(max_length=100)
+#     phone=models.IntegerField()
+#     email=models.ForeignKey('auth.User.email')
 
 
 

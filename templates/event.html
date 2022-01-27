@@ -1,21 +1,26 @@
-{% load static %}
-{% static "img" as baseUrl%}
+{% load static %} {% static "img" as baseUrl%}
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Events Page</title>
 
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
 
     <!-- font awesome cdn link  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
 
     <!-- custom css file link  -->
-    <link rel="stylesheet" href="{% static 'css/event.css' %}">
+    <link rel="stylesheet" href="{% static 'css/event.css' %}" />
     <!-- <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
     <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css'%}">
     <link rel="stylesheet" href="{% static 'css/slicknav.css'%}">
@@ -28,20 +33,15 @@
     <link rel="stylesheet" href="{% static 'css/themify-icons.css'%}">
     <link rel="stylesheet" href="{% static 'css/slick.css'%}">
     <link rel="stylesheet" href="{% static 'css/nice-select.css'%}"> -->
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+  <body>
+    <!-- header section starts  -->
 
-</head>
-<body>
-    
-<!-- header section starts  -->
+    <header class="header">
+      <a href="/index" class="logo"><span></span>Reroute Fitness</a>
 
-
-
- <header class="header">
-
-    <a href="/index" class="logo"><span></span>Reroute Fitness</a>
-
-    <nav class="navbar">
+      <nav class="navbar">
         <a href="#home">home</a>
         <a href="#service">service</a>
         <a href="#about">about</a>
@@ -49,41 +49,50 @@
         <a href="#price">price</a>
         <a href="#review">review</a>
         <a href="#contact">contact</a>
-    </nav>
+      </nav>
 
-    <div id="menu-bars" class="fas fa-bars"></div>
+      <div id="menu-bars" class="fas fa-bars"></div>
+    </header>
 
-</header>
+    <!-- header section ends -->
 
-<!-- header section ends -->
+    <!-- home section starts  -->
 
-<!-- home section starts  -->
-
-<section class="home" id="home">
-
-    <div class="content">
+    <section class="home" id="home">
+      <div class="content">
         <h3>Reroute Fitness <span></span></h3>
         <a href="#" class="btn">contact us</a>
-    </div>
+      </div>
 
-    <div class="swiper-container home-slider">
+      <div class="swiper-container home-slider">
         <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="{% static 'img/events/slide-1.jpg' %}" alt=""></div>
-            <div class="swiper-slide"><img src="{% static 'img/events/slide-2.jpg' %}" alt=""></div>
-            <div class="swiper-slide"><img src="{% static 'img/events/slide-3.jpg' %}" alt=""></div>
-            <div class="swiper-slide"><img src="{% static 'img/events/slide-4.jpg' %}" alt=""></div>
-            <div class="swiper-slide"><img src="{% static 'img/events/slide-5.jpg' %}" alt=""></div>
-            <div class="swiper-slide"><img src="{% static 'img/events/slide-6.jpg' %}" alt=""></div>
+          <div class="swiper-slide">
+            <img src="{% static 'img/events/slide-1.jpg' %}" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="{% static 'img/events/slide-2.jpg' %}" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="{% static 'img/events/slide-3.jpg' %}" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="{% static 'img/events/slide-4.jpg' %}" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="{% static 'img/events/slide-5.jpg' %}" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="{% static 'img/events/slide-6.jpg' %}" alt="" />
+          </div>
         </div>
-    </div>
+      </div>
+    </section>
 
-</section>
+    <!-- home section ends -->
 
-<!-- home section ends -->
+    <!-- service section starts  -->
 
-<!-- service section starts  -->
-
-<!-- <section class="service" id="service">
+    <!-- <section class="service" id="service">
 
     <h1 class="heading"> our <span>services</span> </h1>
 
@@ -129,11 +138,11 @@
 
 </section> -->
 
-<!-- service section ends -->
+    <!-- service section ends -->
 
-<!-- about section starts  -->
+    <!-- about section starts  -->
 
-<!--<section class="about" id="about">
+    <!--<section class="about" id="about">
 
 <h1 class="heading"><span>about</span> us </h1>
 
@@ -154,11 +163,11 @@
 
 </section>-->
 
-<!-- about section ends -->
+    <!-- about section ends -->
 
-<!-- gallery section starts  -->
+    <!-- gallery section starts  -->
 
-<!-- <section class="gallery" id="gallery">
+    <!-- <section class="gallery" id="gallery">
 
     <h1 class="heading">our <span>gallery</span></h1>
 
@@ -258,30 +267,28 @@
 
 </section> -->
 
-<!-- gallery section ends -->
+    <!-- gallery section ends -->
 
-<!-- price section starts  -->
+    <!-- price section starts  -->
 
-<section class="price" id="price">
+    <section class="price" id="price">
+      <h1 class="heading">our <span>Events</span></h1>
 
-    <h1 class="heading"> our <span>Events</span> </h1>
-
-    <div class="box-container">
-
+      <div class="box-container">
         {% for event in events %}
         <div class="box">
-          <img src="{{event.img.url}}" class="img_event">
-            <h3 class="title">{{event.name}}</h3>
-            <h3 class="amount">{{event.price}}</h3>
-            <ul>
-                <img src="" alt="">
-                <li><i class="fas fa-check"></i>{{event.name}}</li>
-                <li> <i class="fas fa-check"></i> decorations </li>
-                <li> <i class="fas fa-check"></i> music and photos </li>
-                <li> <i class="fas fa-check"></i> food and drinks </li>
-                <li> <i class="fas fa-check"></i> invitation card </li>
-            </ul>
-            <a href="{% url 'event_reg_try' event.name %}" class="btn">check out</a>
+          <img src="{{event.img.url}}" class="img_event" />
+          <h3 class="title">{{event.name}}</h3>
+          <h3 class="amount">{{event.price}}</h3>
+          <ul>
+            <img src="" alt="" />
+            <li><i class="fas fa-check"></i>{{event.name}}</li>
+            <li><i class="fas fa-check"></i> decorations</li>
+            <li><i class="fas fa-check"></i> music and photos</li>
+            <li><i class="fas fa-check"></i> food and drinks</li>
+            <li><i class="fas fa-check"></i> invitation card</li>
+          </ul>
+          <a href="{% url 'event_reg_try' event.id %}" class="btn">check out</a>
         </div>
         {% endfor %}
 
@@ -348,83 +355,94 @@
             </ul>
             <a href="#" class="btn">check out</a>
         </div> -->
+      </div>
+    </section>
 
-    </div>
+    <!-- price section ends -->
 
+    <!-- review section starts  -->
 
-</section>
+    <section class="reivew" id="review">
+      <h1 class="heading">client's <span>review</span></h1>
 
-<!-- price section ends -->
-
-<!-- review section starts  -->
-
-<section class="reivew" id="review"> 
-    
-    <h1 class="heading">client's <span>review</span></h1>
-
-    <div class="review-slider swiper-container">
-
+      <div class="review-slider swiper-container">
         <div class="swiper-wrapper">
-
-            <div class="swiper-slide box">
-                <i class="fas fa-quote-right"></i>
-                <div class="user">
-                    <img src="images/pic-1.png" alt="">
-                    <div class="user-info">
-                        <h3>john deo</h3>
-                        <span>happy clients</span>
-                    </div>
-                </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis dolor dicta cum. Eos beatae eligendi, magni numquam nemo sed ut corrupti, ipsam iure nisi unde et assumenda perspiciatis voluptatibus nihil.</p>
+          <div class="swiper-slide box">
+            <i class="fas fa-quote-right"></i>
+            <div class="user">
+              <img src="images/pic-1.png" alt="" />
+              <div class="user-info">
+                <h3>john deo</h3>
+                <span>happy clients</span>
+              </div>
             </div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
+              dolor dicta cum. Eos beatae eligendi, magni numquam nemo sed ut
+              corrupti, ipsam iure nisi unde et assumenda perspiciatis
+              voluptatibus nihil.
+            </p>
+          </div>
 
-            <div class="swiper-slide box">
-                <i class="fas fa-quote-right"></i>
-                <div class="user">
-                    <img src="images/pic-2.png" alt="">
-                    <div class="user-info">
-                        <h3>john deo</h3>
-                        <span>happy clients</span>
-                    </div>
-                </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis dolor dicta cum. Eos beatae eligendi, magni numquam nemo sed ut corrupti, ipsam iure nisi unde et assumenda perspiciatis voluptatibus nihil.</p>
+          <div class="swiper-slide box">
+            <i class="fas fa-quote-right"></i>
+            <div class="user">
+              <img src="images/pic-2.png" alt="" />
+              <div class="user-info">
+                <h3>john deo</h3>
+                <span>happy clients</span>
+              </div>
             </div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
+              dolor dicta cum. Eos beatae eligendi, magni numquam nemo sed ut
+              corrupti, ipsam iure nisi unde et assumenda perspiciatis
+              voluptatibus nihil.
+            </p>
+          </div>
 
-            <div class="swiper-slide box">
-                <i class="fas fa-quote-right"></i>
-                <div class="user">
-                    <img src="images/pic-3.png" alt="">
-                    <div class="user-info">
-                        <h3>john deo</h3>
-                        <span>happy clients</span>
-                    </div>
-                </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis dolor dicta cum. Eos beatae eligendi, magni numquam nemo sed ut corrupti, ipsam iure nisi unde et assumenda perspiciatis voluptatibus nihil.</p>
+          <div class="swiper-slide box">
+            <i class="fas fa-quote-right"></i>
+            <div class="user">
+              <img src="images/pic-3.png" alt="" />
+              <div class="user-info">
+                <h3>john deo</h3>
+                <span>happy clients</span>
+              </div>
             </div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
+              dolor dicta cum. Eos beatae eligendi, magni numquam nemo sed ut
+              corrupti, ipsam iure nisi unde et assumenda perspiciatis
+              voluptatibus nihil.
+            </p>
+          </div>
 
-            <div class="swiper-slide box">
-                <i class="fas fa-quote-right"></i>
-                <div class="user">
-                    <img src="images/pic-4.png" alt="">
-                    <div class="user-info">
-                        <h3>john deo</h3>
-                        <span>happy clients</span>
-                    </div>
-                </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis dolor dicta cum. Eos beatae eligendi, magni numquam nemo sed ut corrupti, ipsam iure nisi unde et assumenda perspiciatis voluptatibus nihil.</p>
+          <div class="swiper-slide box">
+            <i class="fas fa-quote-right"></i>
+            <div class="user">
+              <img src="images/pic-4.png" alt="" />
+              <div class="user-info">
+                <h3>john deo</h3>
+                <span>happy clients</span>
+              </div>
             </div>
-
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
+              dolor dicta cum. Eos beatae eligendi, magni numquam nemo sed ut
+              corrupti, ipsam iure nisi unde et assumenda perspiciatis
+              voluptatibus nihil.
+            </p>
+          </div>
         </div>
+      </div>
+    </section>
 
-    </div>
+    <!-- review section ends -->
 
-</section>
+    <!-- contact section starts  -->
 
-<!-- review section ends -->
-
-<!-- contact section starts  -->
-
-<!--<section class="contact" id="contact">
+    <!--<section class="contact" id="contact">
 
     <h1 class="heading"> <span>contact</span> us </h1>
 
@@ -443,11 +461,11 @@
 
 </section>-->
 
-<!-- contact section ends -->
+    <!-- contact section ends -->
 
-<!-- footer section starts  -->
+    <!-- footer section starts  -->
 
-<!-- <section class="footer">
+    <!-- <section class="footer">
 
     <div class="box-container">
 
@@ -494,54 +512,31 @@
 
 </section> -->
 
-<!-- footer section ends -->
+    <!-- footer section ends -->
 
-<!-- theme toggler  -->
+    <!-- theme toggler  -->
 
-<div class="theme-toggler">
-
-    <div class="toggle-btn">
+    <div class="theme-toggler">
+      <div class="toggle-btn">
         <i class="fas fa-cog"></i>
+      </div>
+
+      <h3>choose color</h3>
+
+      <div class="buttons">
+        <div class="theme-btn" style="background: #3867d6"></div>
+        <div class="theme-btn" style="background: #f7b731"></div>
+        <div class="theme-btn" style="background: #ff0033"></div>
+        <div class="theme-btn" style="background: #20bf6b"></div>
+        <div class="theme-btn" style="background: #fa8231"></div>
+        <div class="theme-btn" style="background: #fc427b"></div>
+      </div>
     </div>
 
-    <h3>choose color</h3>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-    <div class="buttons">
-        <div class="theme-btn" style="background: #3867d6;"></div>
-        <div class="theme-btn" style="background: #f7b731;"></div>
-        <div class="theme-btn" style="background: #ff0033;"></div>
-        <div class="theme-btn" style="background: #20bf6b;"></div>
-        <div class="theme-btn" style="background: #fa8231;"></div>
-        <div class="theme-btn" style="background: #FC427B;"></div>
-    </div>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-<!-- custom js file link  -->
-<!-- <script src="{% static 'js/event_reg.js' %}"></script> -->
-<script src="{% static 'js/event.js' %}"></script>
-
-</body>
+    <!-- custom js file link  -->
+    <!-- <script src="{% static 'js/event_reg.js' %}"></script> -->
+    <script src="{% static 'js/event.js' %}"></script>
+  </body>
 </html>

@@ -27,7 +27,7 @@ urlpatterns=[
 
 
     # dynamic urls
-    path('event_reg/<my_id>/',views.event_reg_try,name="event_reg_try"),
+    path('event_reg/<pk>/',views.event_reg_try,name="event_reg_try"),
    
 
    # serializer paths

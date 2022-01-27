@@ -7,11 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registration Form</title>
-    <link rel="stylesheet" href="{% static 'css/event_reg_form.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/event_reg_form.css' %}" />
   </head>
-  
+
   <body>
-    
     <!-- {% if message  %}
     <div class="error">
         <p>{{ message }}</p>
@@ -31,15 +30,12 @@
   </div>
   {% endif %} -->
 
-
-     
-  
     <div class="container">
-      <h1>{{id}}</h1>
-      
+      <h1>{{event.name}}</h1>
+
       <form id="form" class="form" method="POST" action="/data">
         <h1 style="color: white">Event Registration</h1>
-        
+
         <!--lead member of team-->
         <!-- <div class="form-control">
           <label for="teamname"
@@ -79,7 +75,8 @@
         </div> -->
         <div class="form-control">
           <label for="members"
-            ><span style="color: yellow">*</span>Number Of Members? (Apart from main team member)</label
+            ><span style="color: yellow">*</span>Number Of Members? (Apart from
+            main team member)</label
           >
           <select name="No_mem" id="Totalmembers">
             <option value="0" selected>Select one</option>
@@ -97,7 +94,7 @@
 
           <div class="form-control">
             <label for="Did1"
-              ><span style="color: yellow">*</span>Name of  1st Member
+              ><span style="color: yellow">*</span>Name of 1st Member
               <br />
             </label>
             <input
@@ -110,8 +107,8 @@
           </div>
           <div class="form-control">
             <label for="Vid1"
-              ><span style="color: yellow">*</span>Phone number
-              <br />(whatsapp Number)</label
+              ><span style="color: yellow">*</span>Phone number <br />(whatsapp
+              Number)</label
             >
             <input
               type="tel"
@@ -137,12 +134,12 @@
               <option value="No Level">No Level</option>
             </select> -->
             <input
-            type="number"
-            id="Vid1"
-            placeholder="Enter Valorant ID of 1st Member"
-            name="Vid1"
-            required
-          />
+              type="number"
+              id="Vid1"
+              placeholder="Enter Valorant ID of 1st Member"
+              name="Vid1"
+              required
+            />
           </div>
         </div>
 
@@ -151,9 +148,7 @@
           <h3 style="text-align: center">2nd Member Details</h3>
 
           <div class="form-control">
-            <label for="Did2"
-              >Name  <br />
-            </label>
+            <label for="Did2">Name <br /> </label>
             <input
               type="text"
               id="Did2"
@@ -162,9 +157,7 @@
             />
           </div>
           <div class="form-control">
-            <label for="Vid2"
-              >Phone number</label
-            >
+            <label for="Vid2">Phone number</label>
             <input
               type="text"
               id="Vid2"
@@ -186,43 +179,39 @@
               <option value="No Level">No Level</option>
             </select> -->
             <input
-            type="number"
-            id="Vid2"
-            placeholder="Enter Valorant ID of 2nd Member"
-            name="Vid2"
-          />
+              type="number"
+              id="Vid2"
+              placeholder="Enter Valorant ID of 2nd Member"
+              name="Vid2"
+            />
           </div>
         </div>
 
         <!--3rd member-->
         <div class="memberContainer">
-            <h3 style="text-align: center">3rd Member Details</h3>
-  
-            <div class="form-control">
-              <label for="Did2"
-                >Name  <br />
-              </label>
-              <input
-                type="text"
-                id="Did2"
-                placeholder="Enter Discord Id Of The 2nd Member"
-                name="Did2"
-              />
-            </div>
-            <div class="form-control">
-              <label for="Vid2"
-                >Phone number</label
-              >
-              <input
-                type="text"
-                id="Vid2"
-                placeholder="Enter Valorant ID of 2nd Member"
-                name="Vid2"
-              />
-            </div>
-            <div class="form-control">
-              <label for="playerLevel2">Age</label>
-              <!-- <select name="playerLevel2" id="playerLevel2">
+          <h3 style="text-align: center">3rd Member Details</h3>
+
+          <div class="form-control">
+            <label for="Did2">Name <br /> </label>
+            <input
+              type="text"
+              id="Did2"
+              placeholder="Enter Discord Id Of The 2nd Member"
+              name="Did2"
+            />
+          </div>
+          <div class="form-control">
+            <label for="Vid2">Phone number</label>
+            <input
+              type="text"
+              id="Vid2"
+              placeholder="Enter Valorant ID of 2nd Member"
+              name="Vid2"
+            />
+          </div>
+          <div class="form-control">
+            <label for="playerLevel2">Age</label>
+            <!-- <select name="playerLevel2" id="playerLevel2">
                 <option value="Radiant">Radiant</option>
                 <option value="Immortal">Immortal</option>
                 <option value="Diamond">Diamond</option>
@@ -233,45 +222,40 @@
                 <option value="Iron">Iron</option>
                 <option value="No Level">No Level</option>
               </select> -->
-              <input
+            <input
               type="number"
               id="Vid2"
               placeholder="Enter Valorant ID of 2nd Member"
               name="Vid2"
             />
-            </div>
           </div>
-  
+        </div>
 
         <!--4th member-->
         <div class="memberContainer">
-            <h3 style="text-align: center">4th Member Details</h3>
-  
-            <div class="form-control">
-              <label for="Did2"
-                >Name  <br />
-              </label>
-              <input
-                type="text"
-                id="Did2"
-                placeholder="Enter Discord Id Of The 2nd Member"
-                name="Did2"
-              />
-            </div>
-            <div class="form-control">
-              <label for="Vid2"
-                >Phone number</label
-              >
-              <input
-                type="text"
-                id="Vid2"
-                placeholder="Enter Valorant ID of 2nd Member"
-                name="Vid2"
-              />
-            </div>
-            <div class="form-control">
-              <label for="playerLevel2">Age</label>
-              <!-- <select name="playerLevel2" id="playerLevel2">
+          <h3 style="text-align: center">4th Member Details</h3>
+
+          <div class="form-control">
+            <label for="Did2">Name <br /> </label>
+            <input
+              type="text"
+              id="Did2"
+              placeholder="Enter Discord Id Of The 2nd Member"
+              name="Did2"
+            />
+          </div>
+          <div class="form-control">
+            <label for="Vid2">Phone number</label>
+            <input
+              type="text"
+              id="Vid2"
+              placeholder="Enter Valorant ID of 2nd Member"
+              name="Vid2"
+            />
+          </div>
+          <div class="form-control">
+            <label for="playerLevel2">Age</label>
+            <!-- <select name="playerLevel2" id="playerLevel2">
                 <option value="Radiant">Radiant</option>
                 <option value="Immortal">Immortal</option>
                 <option value="Diamond">Diamond</option>
@@ -282,45 +266,40 @@
                 <option value="Iron">Iron</option>
                 <option value="No Level">No Level</option>
               </select> -->
-              <input
+            <input
               type="number"
               id="Vid2"
               placeholder="Enter Valorant ID of 2nd Member"
               name="Vid2"
             />
-            </div>
           </div>
-  
+        </div>
 
         <!--5th member-->
         <div class="memberContainer">
-            <h3 style="text-align: center">5th Member Details</h3>
-  
-            <div class="form-control">
-              <label for="Did2"
-                >Name  <br />
-              </label>
-              <input
-                type="text"
-                id="Did2"
-                placeholder="Enter Discord Id Of The 2nd Member"
-                name="Did2"
-              />
-            </div>
-            <div class="form-control">
-              <label for="Vid2"
-                >Phone number</label
-              >
-              <input
-                type="text"
-                id="Vid2"
-                placeholder="Enter Valorant ID of 2nd Member"
-                name="Vid2"
-              />
-            </div>
-            <div class="form-control">
-              <label for="playerLevel2">Age</label>
-              <!-- <select name="playerLevel2" id="playerLevel2">
+          <h3 style="text-align: center">5th Member Details</h3>
+
+          <div class="form-control">
+            <label for="Did2">Name <br /> </label>
+            <input
+              type="text"
+              id="Did2"
+              placeholder="Enter Discord Id Of The 2nd Member"
+              name="Did2"
+            />
+          </div>
+          <div class="form-control">
+            <label for="Vid2">Phone number</label>
+            <input
+              type="text"
+              id="Vid2"
+              placeholder="Enter Valorant ID of 2nd Member"
+              name="Vid2"
+            />
+          </div>
+          <div class="form-control">
+            <label for="playerLevel2">Age</label>
+            <!-- <select name="playerLevel2" id="playerLevel2">
                 <option value="Radiant">Radiant</option>
                 <option value="Immortal">Immortal</option>
                 <option value="Diamond">Diamond</option>
@@ -331,15 +310,14 @@
                 <option value="Iron">Iron</option>
                 <option value="No Level">No Level</option>
               </select> -->
-              <input
+            <input
               type="number"
               id="Vid2"
               placeholder="Enter Valorant ID of 2nd Member"
               name="Vid2"
             />
-            </div>
           </div>
-  
+        </div>
 
         <!--Transcation ID-->
         <div class="form-control">
@@ -367,7 +345,6 @@
             name="Tid"
             required
           />
-         
         </div>
 
         <h4 style="text-align: left; color: white">
