@@ -15,7 +15,7 @@ from django.utils.http import urlsafe_base64_encode
 from django.contrib.auth.tokens import default_token_generator
 from django.utils.encoding import force_bytes
 from  django.views.decorators.csrf import csrf_exempt
-from .models import Events
+from .models import Events,event_reg
 from django.core.mail import send_mail
 import re
 
@@ -83,9 +83,9 @@ def register(request):
         if re.match('^[0-9]*$', password1):
             messages.info(request,'The password cannot be entirely unique,please try again')
             return redirect('register')
-        if not password1.isdigit():
-            messages.info(request,'Please make sure your password has at least one number in it')
-            return redirect('register')
+        # if not password1.isdigit():
+        #     messages.info(request,'Please make sure your password has at least one number in it')
+        #     return redirect('register')
 
         if password1==password2:
             if User.objects.filter(username=username).exists():
@@ -187,9 +187,9 @@ def my_event(request):
         return render(request,"/")
 
 
-def event_reg(request):
-    events=Events.objects.all()
-    return render(request,'event_reg.html',{'events':events})
+# def event_reg(request):
+#     event=Events.objects.all()
+#     return render(request,'event_reg.html',{'event':event})
    
 
 # payment integration
@@ -239,10 +239,59 @@ def index(request):
 # Event registration part
 
 def event_reg_try(request,pk):
-       
        event=Events.objects.get(id=pk)
+    #    if request.method=="POST":
+    #     event=Events.objects.get(id=pk)
+    #     no_members=int(request.POST['No_mem'])
+    #     email_id=request.user.email
+    #     user=request.user
+    #     for i in range(no_members):
+    #         name=request.POST['Did'+str(i+1)]
+    #         phoneNumber=request.POST['Vid'+str(i+1)]
+    #         age=request.POST['Pid'+str(i+1)]
+    #         transaction_id=request.POST['Tid']
+    #         event=event_reg(user=user,event=event,number=no_members,phone=phoneNumber,age=age,transaction=transaction_id)
+    #         event.save()
+    #     return redirect('index.html')
     #    event={'id':my_id}
        return render(request,'event_reg.html',{'event':event})
+
+
+
+# views for event registartion 
+
+def eventRegistration(request,pk):
+    event=Events.objects.get(id=pk)
+ 
+    if request.method=="POST":
+        price=request.POST['Pid']
+        event=Events.objects.get(id=pk)
+        print(event)
+        no_members=int(request.POST['No_mem'])
+        print(no_members)
+        email_id=request.user.email
+        users=request.user
+        d = dict(request.POST.items())
+        print(d)
+        
+        for i in range(no_members):
+            print("IN")
+            name=request.POST['Did'+str(i+1)]
+            phoneNumber=request.POST['Vid'+str(i+1)]
+            print('Vid'+str(i+1))
+            
+            age=request.POST['Pid'+str(i+1)]
+            transaction_id=request.POST['Tid']
+            event1=event_reg.objects.create(user=users,event=event,number=no_members,phone=phoneNumber,age=age,transaction=transaction_id,price=price,name=name)
+        
+            # print(event1)
+            event1.save()
+        return redirect('index.html')
+    else:
+        return render(request,'index.html',{'event':event})
+
+
+
 
 
 
@@ -296,6 +345,10 @@ class Event_list(APIView):
             serializer.save()
             return Response(serializer.data,status=status.HTTP_201_CREATED)
         return JsonResponse(serializer.errors,status=status.HTTP_400_BAD_REQUEST)
+
+
+
+
     
 
 

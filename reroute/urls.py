@@ -43,7 +43,8 @@ urlpatterns = [
     path("my_events/",views.my_event,name="my_event"),
     path('search_event/',views.search_event,name="search_event"),
     path('search_prog/',views.search_prog,name="search_prog"),
-    path('event_reg/',views.event_reg,name="event_reg")
+    path('event_reg/',views.event_reg,name="event_reg"),
+     path('eventRegistration/<pk>/',views.eventRegistration,name="eventRegistration")
  
 ]
 

@@ -33,7 +33,13 @@
     <div class="container">
       <h1>{{event.name}}</h1>
 
-      <form id="form" class="form" method="POST" action="/data">
+      <form
+        id="form"
+        class="form"
+        method="POST"
+        action="/eventRegistration/{{event.id}}/"
+      >
+        {% csrf_token %}
         <h1 style="color: white">Event Registration</h1>
 
         <!--lead member of team-->
@@ -100,7 +106,7 @@
             <input
               type="text"
               id="Did1"
-              placeholder="Enter Discord Id Of The 1st Member"
+              placeholder="Enter Name Of The 1st Member"
               name="Did1"
               required
             />
@@ -113,7 +119,7 @@
             <input
               type="tel"
               id="Vid1"
-              placeholder="Enter Valorant ID of 1st Member"
+              placeholder="Enter Phone Number of 1st Member"
               name="Vid1"
               required
             />
@@ -135,9 +141,9 @@
             </select> -->
             <input
               type="number"
-              id="Vid1"
-              placeholder="Enter Valorant ID of 1st Member"
-              name="Vid1"
+              id="Pid1"
+              placeholder="Enter Age of 1st Member"
+              name="Pid1"
               required
             />
           </div>
@@ -152,16 +158,16 @@
             <input
               type="text"
               id="Did2"
-              placeholder="Enter Discord Id Of The 2nd Member"
+              placeholder="Enter Name of The 2nd Member"
               name="Did2"
             />
           </div>
           <div class="form-control">
             <label for="Vid2">Phone number</label>
             <input
-              type="text"
+              type="tel"
               id="Vid2"
-              placeholder="Enter Valorant ID of 2nd Member"
+              placeholder="Enter Phone Number of 2nd Member"
               name="Vid2"
             />
           </div>
@@ -180,9 +186,9 @@
             </select> -->
             <input
               type="number"
-              id="Vid2"
-              placeholder="Enter Valorant ID of 2nd Member"
-              name="Vid2"
+              id="Pid2"
+              placeholder="Enter Age of 2nd Member"
+              name="Pid2"
             />
           </div>
         </div>
@@ -192,21 +198,21 @@
           <h3 style="text-align: center">3rd Member Details</h3>
 
           <div class="form-control">
-            <label for="Did2">Name <br /> </label>
+            <label for="Did3">Name <br /> </label>
             <input
               type="text"
-              id="Did2"
-              placeholder="Enter Discord Id Of The 2nd Member"
-              name="Did2"
+              id="Did3"
+              placeholder="Enter Name Of The 3rd Member"
+              name="Did3"
             />
           </div>
           <div class="form-control">
-            <label for="Vid2">Phone number</label>
+            <label for="Vid3">Phone number</label>
             <input
-              type="text"
-              id="Vid2"
-              placeholder="Enter Valorant ID of 2nd Member"
-              name="Vid2"
+              type="tel"
+              id="Vid3"
+              placeholder="Enter Phone Number of 3rd Member"
+              name="Vid3"
             />
           </div>
           <div class="form-control">
@@ -224,9 +230,9 @@
               </select> -->
             <input
               type="number"
-              id="Vid2"
-              placeholder="Enter Valorant ID of 2nd Member"
-              name="Vid2"
+              id="Pid3"
+              placeholder="Enter Age of 3rd Member"
+              name="Pid3"
             />
           </div>
         </div>
@@ -240,16 +246,16 @@
             <input
               type="text"
               id="Did2"
-              placeholder="Enter Discord Id Of The 2nd Member"
+              placeholder="Enter Name Of The 4th Member"
               name="Did2"
             />
           </div>
           <div class="form-control">
             <label for="Vid2">Phone number</label>
             <input
-              type="text"
+              type="tel"
               id="Vid2"
-              placeholder="Enter Valorant ID of 2nd Member"
+              placeholder="Enter Phone Number of 4th Member"
               name="Vid2"
             />
           </div>
@@ -268,9 +274,9 @@
               </select> -->
             <input
               type="number"
-              id="Vid2"
-              placeholder="Enter Valorant ID of 2nd Member"
-              name="Vid2"
+              id="Pid2"
+              placeholder="Enter Age of 4th Member"
+              name="Pid2"
             />
           </div>
         </div>
@@ -284,16 +290,16 @@
             <input
               type="text"
               id="Did2"
-              placeholder="Enter Discord Id Of The 2nd Member"
+              placeholder="Enter Name Of The 5th Member"
               name="Did2"
             />
           </div>
           <div class="form-control">
             <label for="Vid2">Phone number</label>
             <input
-              type="text"
+              type="tel"
               id="Vid2"
-              placeholder="Enter Valorant ID of 2nd Member"
+              placeholder="Enter Phone Number of 5th Member"
               name="Vid2"
             />
           </div>
@@ -312,9 +318,9 @@
               </select> -->
             <input
               type="number"
-              id="Vid2"
-              placeholder="Enter Valorant ID of 2nd Member"
-              name="Vid2"
+              id="Pid2"
+              placeholder="Enter age of 5th Member"
+              name="Pid2"
             />
           </div>
         </div>
@@ -342,7 +348,7 @@
             type="text"
             id="costid"
             placeholder="Total cost"
-            name="Tid"
+            name="Pid"
             required
           />
         </div>
@@ -351,7 +357,7 @@
           <span style="color: yellow">*</span> marked are required fields.
         </h4>
         <div>
-          <a href="#">
+          <a href="{% url 'eventRegistration' event.id %}">
             <button class="btn btn--light">
               <span class="btn__inner">
                 <span class="btn__slide"></span>

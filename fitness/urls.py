@@ -1,3 +1,4 @@
+from unicodedata import name
 from django.urls import path
 from. import views
 from django.contrib.auth import views as auth_views
@@ -32,6 +33,10 @@ urlpatterns=[
 
    # serializer paths
    path('get_event/<int:id>', Event_fetch.as_view()),
-   path('get_event_list/',Event_list.as_view())
+   path('get_event_list/',Event_list.as_view()),
+
+
+   # Event registration
+path('eventRegistration/<pk>/',views.eventRegistration,name="eventRegistration")
 
 ]

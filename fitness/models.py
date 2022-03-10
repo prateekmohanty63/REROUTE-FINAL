@@ -24,13 +24,15 @@ class gallery(models.Model):
     img=models.ImageField(upload_to='gallery')
 
 
-# class event_reg(models.Model):
-#     user=models.ForeignKey('auth.User',on_delete=models.CASCADE)
-#     event=models.ForeignKey(Events,on_delete=models.CASCADE)
-#     number=models.IntegerField()
-#     name=models.CharField(max_length=100)
-#     phone=models.IntegerField()
-#     email=models.ForeignKey('auth.User.email')
+class event_reg(models.Model):
+    user=models.ForeignKey(User,on_delete=models.CASCADE)
+    event=models.ForeignKey(Events,on_delete=models.CASCADE)
+    number=models.IntegerField()
+    name=models.CharField(max_length=100)
+    phone=models.IntegerField()
+    age=models.IntegerField()
+    transaction=models.CharField(max_length=100)
+    price=models.IntegerField(default=500)
 
 
 
